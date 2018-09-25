@@ -1,0 +1,10 @@
+# config/cucumber.yml
+##YAML Template
+
+<% test_batch_id = "#{ENV['TEST_ENV_NUMBER']}" %>
+<% plataforma = "#{ENV['PLATAFORMA']}" %>
+<% sistema = "#{ENV['SISTEMA']}" %>
+<% plataforma_ex = "#{ENV['PLATAFORMA_EX']}" %>
+---
+
+parallel: PLATFORM=<%= plataforma %><%= test_batch_id %> -f pretty -f json -o reports/<%= plataforma %>/<%= plataforma %><%= test_batch_id %>.json SCREENSHOT_PATH=screenshots/<%= plataforma %>/ -r features/support -r features/<%= sistema %> -r features/step_definitions --exclude features/<%= plataforma_ex %> --tags 'not @instrumentado and not @WIP and not @MASSA and not @<%= plataforma_ex %>'

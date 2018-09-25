@@ -1,0 +1,16 @@
+[caps]
+    platformName = "android"
+    deviceName = "android193"
+    app = "apk file"
+    # Use automationName with gpu, because default automator,
+    # not recognize any elements on the screen
+    # automationName = "Selendroid"
+    noReset = true
+    fullReset = false
+    autoGrantPermissions = true
+    unicodeKeyboard = true
+    resetKeyboard = true
+    #newCommandTimeout = 1
+    appActivity = "br.com.viavarejo.feature.home.HomeActivity"
+    udid = "emulator-5576"
+    systemPort = 8576

@@ -1,0 +1,17 @@
+[caps]
+    platformName = "android"
+    deviceName = "android260"
+    platfotmVersion = "6.0"
+    app = "apk file"
+    # Use automationName with gpu, because default automator,
+    # not recognize any elements on the screen
+    automationName = "UiAutomator2"
+    noReset = true
+    fullReset = false
+    autoGrantPermissions = true
+    unicodeKeyboard = true
+    resetKeyboard = true
+    # newCommandTimeout = 1
+    appActivity = "br.com.viavarejo.feature.home.HomeActivity"
+    udid = "emulator-5560"
+    systemPort = 8560

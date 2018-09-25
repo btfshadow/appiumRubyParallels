@@ -1,0 +1,16 @@
+[caps]
+    platformName = "android"
+    deviceName = "android261"
+    app = "vv-viaunica-android/app/build/outputs/apk/bahia/staging/app-bahia-staging.apk"
+    # Use automationName with gpu, because default automator,
+    # not recognize any elements on the screen
+    automationName = "UiAutomator2"
+    noReset = true
+    fullReset = false
+    autoGrantPermissions = true
+    unicodeKeyboard = true
+    resetKeyboard = true
+    # newCommandTimeout = 1
+    appActivity = "br.com.viavarejo.feature.home.HomeActivity"
+    systemPort = 8562
+    udid = "emulator-5562"

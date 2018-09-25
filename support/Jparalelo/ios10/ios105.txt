@@ -1,0 +1,17 @@
+[caps]
+    platformName = "ios"
+    platformVersion = "10.0"
+    deviceName = "ios104"
+    app = "iOSAPP/iOS_Simulator_iPhone_8/ViaVarejo.app"
+    # Use automationName with gpu, because default automator,
+    # not recognize any elements on the screen
+    automationName = "XCUITest"
+    noReset = true
+    fullReset = false
+    keepKeychains = false
+    connectHardwareKeyboard = false
+    unicodeKeyboard = true
+    # isHeadless = true
+    resetKeyboard = true
+    autoAcceptAlerts = true
+    wdaLocalPort = 9300
