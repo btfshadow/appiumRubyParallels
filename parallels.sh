@@ -84,6 +84,15 @@ function create_android_emulator(){
             let i2=$i2+1
       done
  }
+ function wait_android_emulator(){
+       i5=0
+       for device in $(emulator -list-avds | GREP $name)
+      do
+            port2=$(($i5*2))
+            while [ "`adb -s emulator-55$portemulator$port2 shell getprop sys.boot_completed | tr -d '\r' `" != "1" ] ; do sleep 1; done
+            let i5=$i5+1
+      done
+ }
 
 # create iOS Emulators
 function create_ios_emulator(){
@@ -160,7 +169,10 @@ mkdir -p reports/"$PLATFORM$API"
 
 appium_start
 
-sleep 120
+if [ "$PLATFORM" == "android" ]; then
+      wait_android_emulator
+fi
+
 start_cucumber_parallel
 
 generate_report
